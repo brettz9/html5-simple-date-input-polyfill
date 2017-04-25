@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "html5-simple-date-input-polyfill",
   "version": "1.1.0",
   "description": "input type date polyfill",
@@ -7,14 +7,36 @@
     "name": "Lior Wohl",
     "email": "liorwohl@gmail.com"
   },
+  "contributors": [
+    "Brett Zamir"
+  ],
+  "scripts": {
+    "uglify": "uglifyjs html5-simple-date-input-polyfill.js -o html5-simple-date-input-polyfill.min.js --source-map-inline",
+    "sassify": "node-sass html5-simple-date-input-polyfill.scss html5-simple-date-input-polyfill.css --output-style expanded --source-map-embed",
+    "prepublish": "npm run uglify && npm run sassify"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/liorwohl/html5-simple-date-input-polyfill.git"
   },
   "bugs": "https://github.com/liorwohl/html5-simple-date-input-polyfill/issues",
-  "keywords": ["html5","date","datepicker","type"],
+  "keywords": [
+    "html5",
+    "date",
+    "datepicker",
+    "type"
+  ],
   "analyze": true,
   "license": "MIT",
-  "readme": "ERROR: No README data found!"
-} 
- 
+  "readme": "ERROR: No README data found!",
+  "devDependencies": {
+    "eslint": "3.19.0",
+    "eslint-config-standard": "10.2.1",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-node": "4.2.2",
+    "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-standard": "3.0.1",
+    "node-sass": "^4.5.2",
+    "uglify-js": "^2.8.22"
+  }
+}
